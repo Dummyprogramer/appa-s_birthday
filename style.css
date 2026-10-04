@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: #f4e9e5;
+
+    font-family: Georgia, serif;
+
+    color: #543c42;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 30px 15px;
+
+}
+
+
+/* HEADER */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+header h1 {
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+
+    color: #46bafd;
+
+}
+
+
+header p {
+
+    margin-top: 8px;
+
+    font-style: italic;
+
+}
+
+
+/* BOOK */
+
+.book {
+    width: 430px;
+    height: 580px;
+    position: relative;
+    perspective: 1500px;
+}
+
+
+/* COMMON PAGE */
+
+.page {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 35px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(70, 40, 40, 0.25);
+
+}
+
+
+/* COVER */
+
+.cover {
+    background: #4f81a8;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    z-index: 2;
+
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+
+.issue {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.cover-content {
+
+    text-align: left;
+
+}
+
+
+.small-title {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.cover h2 {
+
+    font-size: 58px;
+
+    line-height: 0.9;
+
+    margin: 25px 0;
+    LETTER-SPACING: 2PX;
+
+}
+
+
+.cover-content > p:last-of-type {
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    max-width: 280px;
+
+}
+
+
+.flower {
+
+    text-align: right;
+
+    font-size: 90px;
+
+    margin-top: 20px;
+
+}
+
+
+.author {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* SECOND PAGE */
+
+.second-page {
+
+    background: #fffaf5;
+
+    z-index: 1;
+
+}
+
+
+.page-label {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #b17b85;
+
+}
+
+
+.second-page h2 {
+
+    font-size: 40px;
+
+    margin: 30px 0;
+
+}
+
+
+.second-page p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+}
+
+
+.signature {
+
+    font-style: italic;
+
+    margin-top: 80px;
+
+}
+
+
+.page-number {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    right: 25px;
+
+    font-size: 12px;
+
+}
+.controls {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.controls button {
+    background: #4f81a8;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.controls button:hover {
+    background: #3d6f9e;
+}
+.cover.flipped {
+    transform: rotateY(-180deg);
+}
+.birthday-name {
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+.photo-frame {
+    width: 100%;
+    height: 280px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #4f81a8;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #e8f1f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #4f81a8;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.photo-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px !important;
+    color: #4f81a8;
+}
+.birthday-photo {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto;
+}
+
+.second-page h2 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.photo-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 13px !important;
+    color: #4f81a8;
+    margin-top: 10px;
+}
+.third-page {
+    background: #f8fbfd;
+    z-index: 0;
+    padding: 28px;
+    overflow: hidden;
+}
+
+.third-page h2 {
+    font-size: 34px;
+    margin: 18px 0 12px;
+    color: #3d6f9e;
+}
+
+.birthday-quote {
+    border-left: 3px solid #4f81a8;
+    padding: 8px 12px;
+    margin: 12px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-style: italic;
+    color: #4f81a8;
+    background: #eef5fa;
+}
+
+.third-page .message {
+    font-size: 14px !important;
+    line-height: 1.45;
+    margin-bottom: 12px;
+}
+
+.third-page .birthday-wish {
+    font-size: 18px !important;
+    margin-top: 18px;
+}
+.page {
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    backface-visibility: hidden;
+}
+
+.page.flipped {
+    transform: rotateY(-180deg);
+}
+.cover-bottom {
+    text-align: center;
+}
+
+.decorative-line {
+    width: 80px;
+    height: 1px;
+    background: white;
+    margin: 0 auto 12px;
+}
+
+.cover-bottom .author {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+.photo-intro {
+    font-size: 13px !important;
+    font-style: italic;
+    text-align: center;
+    color: #6d879d;
+    margin-bottom: 15px;
+}
+
+.photo-frame {
+    width: 100%;
+    height: 230px;
+    padding: 8px;
+    border: 1px solid #4f81a8;
+    background: white;
+}
+
+.photo-frame .birthday-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.photo-decoration {
+    text-align: center;
+    color: #4f81a8;
+    font-size: 14px;
+    margin: 12px 0 5px;
+}
+
+.photo-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 13px !important;
+    color: #4f81a8;
+    margin-top: 5px;
+}
+.birthday-quote {
+    border-left: 3px solid #4f81a8;
+    padding: 10px 15px;
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #4f81a8;
+    background: #eef5fa;
+}
+.memories-page {
+    background: #f8fbfd;
+    z-index: -1;
+    padding: 28px;
+    overflow: hidden;
+}
+
+.memories-page h2 {
+    font-size: 34px;
+    margin: 18px 0;
+    color: #3d6f9e;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.memory-box {
+    height: 145px;
+    background: #e8f1f8;
+    border: 1px solid #9bb8cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.memory-box span {
+    font-size: 32px;
+}
+
+.memory-box p {
+    font-size: 12px !important;
+    margin-top: 8px;
+    color: #4f81a8;
+}
+
+.memories-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 13px !important;
+    line-height: 1.5;
+    margin-top: 18px;
+    color: #6d879d;
+}
+.memory-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.featured-memory {
+    grid-column: 1 / 3;
+    height: 110px;
+}
+.second-page {
+    position: absolute;
+    overflow: hidden;
+}
+
+.page2-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.18;
+    z-index: 0;
+}
+
+.second-page > *:not(.page2-background) {
+    position: relative;
+    z-index: 1;
+}
+.third-page {
+    position: absolute;
+    overflow: hidden;
+}
+
+.page3-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.20;
+    z-index: 0;
+}
+
+.third-page > *:not(.page3-background) {
+    position: relative;
+    z-index: 1;
+}
+.video-page {
+    background: #f8fbfd;
+    z-index: -2;
+    padding: 28px;
+    overflow: hidden;
+}
+
+.video-page h2 {
+    font-size: 34px;
+    margin: 18px 0 10px;
+    color: #3d6f9e;
+}
+
+.video-intro {
+    font-size: 14px !important;
+    font-style: italic;
+    text-align: center;
+    color: #6d879d;
+    margin-bottom: 18px;
+}
+
+.video-frame {
+    width: 100%;
+    height: 260px;
+    padding: 8px;
+    border: 1px solid #4f81a8;
+    background: white;
+}
+
+.video-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-caption {
+    text-align: center;
+    font-size: 13px !important;
+    font-style: italic;
+    color: #4f81a8;
+    margin-top: 15px;
+}
+.memories-page {
+    position: absolute;
+    overflow: hidden;
+}
+
+.page4-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+.memories-page > *:not(.page4-background) {
+    position: relative;
+    z-index: 1;
+}
+.page {
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    backface-visibility: hidden;
+}
+.page.flipped {
+    transform: rotateY(-180deg);
+    box-shadow:
+        -8px 10px 25px rgba(0, 0, 0, 0.18);
+}
+.controls {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.controls button {
+    background: #4f81a8;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #3d6f9e;
+    transform: translateY(-2px);
+}
+.book {
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.20));
+}
+.video-page {
+    position: absolute;
+    overflow: hidden;
+}
+
+.page5-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.20;
+    z-index: 0;
+}
+
+.video-page > *:not(.page5-background) {
+    position: relative;
+    z-index: 1;
+}
+.video-frame {
+    border-radius: 6px;
+    box-shadow:
+        0 8px 18px rgba(29, 71, 82, 0.808);
+    overflow: hidden;
+}
+
+.video-frame video {
+    border-radius: 4px;
+}
+.video-decoration {
+    text-align: center;
+    font-size: 20px;
+    color: #4f81a8;
+    margin: 8px 0 12px;
+}
+.final-page {
+    background: #4f81a8;
+    color: rgb(255, 255, 255);
+    padding: 35px;
+    overflow: hidden;
+    z-index: -3;
+}
+
+.final-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.final-decoration {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.final-page h2 {
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.final-message {
+    max-width: 280px;
+    font-size: 15px !important;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.final-line {
+    width: 70px;
+    height: 1px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.final-wish {
+    font-size: 13px !important;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.final-signature {
+    font-size: 13px !important;
+    line-height: 1.6;
+    font-style: italic;
+    margin-top: 35px;
+}
+
+.final-page .page-number {
+    color: white;
+}
+.final-page {
+    position: absolute;
+}
+
+.final-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.10;
+    z-index: 0;
+}
+
+.final-page > *:not(.final-background) {
+    position: relative;
+    z-index: 1;
+}
+#musicButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: #4f81a8;
+    color: white;
+
+    border: 1px solid white;
+    padding: 9px 16px;
+
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+#musicButton:hover {
+    background: #3d6f9e;
+    transform: translateY(-2px);
+}
+#musicButton.playing {
+    box-shadow:
+        0 0 12px rgba(79, 129, 168, 0.7),
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
